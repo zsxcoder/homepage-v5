@@ -286,7 +286,6 @@ function showToast(message: string) {
   border-radius: 8px;
   font-size: 0.65rem;
   font-weight: 600;
-  z-index: 5;
 }
 
 .blog-main-info {
