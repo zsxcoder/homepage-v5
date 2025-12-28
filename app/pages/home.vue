@@ -110,7 +110,7 @@ if (process.client) {
 					<div class="timeline-date">
 						2025年2月
 					</div>
-					<p>第一次搭建 纸鹿 大佬的<ZLink to="https://github.com/L33Z22L11/blog-v3">个人博客</ZLink>自用。</p>
+					<p>第一次搭建 纸鹿 大佬的<ZLink to="https://github.com/L33Z22L11/blog-v3" icon="ri:github-line">个人博客</ZLink>自用。</p>
 				</div>
 				<div class="timeline-item">
 					<div class="timeline-date">
@@ -138,7 +138,7 @@ if (process.client) {
 				</p>
 				<p>
 					魔改参考
-					<ZLink to="https://github.com/MC-YCY/blog-ui" icon="ri:github-line">春秋半夏大佬的博客</ZLink>的前端代码
+					<ZLink to="https://github.com/MC-YCY/blog-ui" icon="ri:github-line">MC-YCY/blog-ui</ZLink>的前端代码
 					。
 				</p>
 				<p>

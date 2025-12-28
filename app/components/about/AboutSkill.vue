@@ -13,7 +13,7 @@ let myChartInstance: echarts.ECharts | null = null
 
 const swiperOptions = {
 	modules: [Autoplay],
-	spaceBetween: 10,
+	spaceBetween: 25,
 	slidesPerView: 'auto' as const,
 	autoplay: {
 		delay: 0,
