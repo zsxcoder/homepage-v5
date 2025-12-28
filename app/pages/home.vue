@@ -153,6 +153,11 @@ if (process.client) {
 			</div>
 		</div>
 	</div>
+
+	<!-- Waline 评论组件 -->
+	<client-only>
+		<Waline path="/home" title="主页" />
+	</client-only>
 </div>
 </template>
 

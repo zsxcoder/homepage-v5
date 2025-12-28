@@ -221,6 +221,11 @@ function showToast(message: string) {
 			</div>
 		</div>
 	</div>
+
+	<!-- Waline 评论组件 -->
+	<client-only>
+		<Waline path="/link" title="友链" />
+	</client-only>
 </div>
 </template>
 
