@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import { useHead } from '#imports'
+import { onMounted } from 'vue'
 
 const props = defineProps<{
 	path: string
@@ -21,12 +21,13 @@ useHead({
 
 async function initWaline() {
 	const container = document.querySelector('#waline-container')
-	if (!container) return
+	if (!container)
+		return
 
 	// 从 CDN 动态导入 Waline
-	const { init } = await import('https://unpkg.com/@waline/client@v3/dist/waline.js')
+	const waline = await import('https://unpkg.com/@waline/client@v3/dist/waline.js')
 
-	init({
+	waline.init({
 		el: '#waline-container',
 		serverURL,
 		path: props.path,
@@ -51,7 +52,7 @@ onMounted(() => {
 </script>
 
 <template>
-	<div id="waline-container" class="waline-container" />
+<div id="waline-container" class="waline-container" />
 </template>
 
 <style>
