@@ -5,6 +5,13 @@ settings:
   excludeLinksFromLockfile: false
 
 catalogs:
+  default:
+    '@iconify-json/logos':
+      specifier: ^1.2.10
+      version: 1.2.10
+    '@iconify-json/material-icon-theme':
+      specifier: ^1.2.45
+      version: 1.2.45
   framework:
     nuxt:
       specifier: ^4.2.1
@@ -151,10 +158,10 @@ importers:
         specifier: catalog:quality
         version: 6.2.0(@vue/compiler-sfc@3.5.24)(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       '@iconify-json/logos':
-        specifier: ^1.2.10
+        specifier: 'catalog:'
         version: 1.2.10
       '@iconify-json/material-icon-theme':
-        specifier: ^1.2.45
+        specifier: 'catalog:'
         version: 1.2.45
       '@zinkawaii/stylelint-config':
         specifier: catalog:quality
