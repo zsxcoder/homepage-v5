@@ -3,22 +3,22 @@
 import type { NitroConfig } from 'nitropack'
 
 const author = {
-	name: '纸鹿本鹿',
-	avatar: 'https://wsrv.nl/?url=github.com/L33Z22L11.png',
-	email: 'hi@zhilu.cyou',
-	homepage: 'https://www.zhilu.site/',
+	name: '钟神秀',
+	avatar: 'https://wsrv.nl/?url=github.com/zsxcoder.png',
+	email: '3149261770@qq.com',
+	homepage: 'https://home.zsxcoder.top/',
 }
 
 const homepageConfig = {
-	title: '纸鹿 (@L33Z22L11)',
-	subtitle: '纸鹿至麓不知路，支炉制露不止漉',
-	description: '纸鹿（也称作纸鹿本鹿、Zhilu、L33Z22L11）是一名开源爱好者，这是纸鹿的个人主页。他有一个博客「纸鹿摸鱼处」，记录了他在生活和技术学习中的点滴经历，充满启发与思考。他的个人主页和博客界面简洁美观，内容丰富实用，人气互动活跃，涵盖了编程、生活、学习等多个领域，为读者提供了卓越的阅读体验。',
+	title: '钟神秀 (@ZSXCoder)',
+	subtitle: '造化钟神秀，阴阳割昏晓。',
+	description: '钟神秀（也称作克喵爱吃卤面、克喵、ZSX）是一名开源爱好者、博客写作者，这是钟神秀的个人主页。他有博客「ZSXの小站」，记录了他在生活和技术学习中的点滴经历，充满启发与思考。他的个人主页和博客界面简洁美观，内容丰富实用，人气互动活跃，涵盖了编程、生活、学习等多个领域，为读者提供了卓越的阅读体验。',
 	author,
 	language: 'zh-CN',
 	timezone: 'Asia/Shanghai',
 	favicon: '/icon.png',
-	url: 'https://www.zhilu.site/',
-	blogAtom: 'https://blog.zhilu.site/atom.xml',
+	url: 'https://home.zsxcoder.top/',
+	blogAtom: 'https://blog.zsxcoder.top/atom.xml',
 }
 
 // https://nitro.build/config#routerules

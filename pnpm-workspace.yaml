@@ -18,6 +18,7 @@ catalogs:
     embla-carousel-vue: ^8.6.0
     embla-carousel-wheel-gestures: ^8.1.0
     vue-tippy: ^6.7.1
+    swiper: ^12.0.3
   util:
     '@nuxtjs/seo': ^3.2.2
     '@pinia/nuxt': ^0.11.3
@@ -25,6 +26,7 @@ catalogs:
     '@vueuse/nuxt': ^14.0.0
     date-fns: ^4.1.0
     date-fns-tz: ^3.2.0
+    echarts: ^6.0.0
     fast-xml-parser: ^5.3.2
 
 engineStrict: true
@@ -37,3 +39,6 @@ onlyBuiltDependencies:
   - vue-demi
 
 shamefullyHoist: true
+catalog:
+  '@iconify-json/logos': ^1.2.10
+  '@iconify-json/material-icon-theme': ^1.2.45

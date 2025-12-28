@@ -11,7 +11,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "start": "nuxt generate && nuxt preview"
   },
   "dependencies": {
     "@nuxt/icon": "catalog:ui",
@@ -23,17 +24,21 @@
     "@vueuse/nuxt": "catalog:util",
     "date-fns": "catalog:util",
     "date-fns-tz": "catalog:util",
+    "echarts": "catalog:util",
     "embla-carousel-autoplay": "catalog:ui",
     "embla-carousel-vue": "catalog:ui",
     "embla-carousel-wheel-gestures": "catalog:ui",
     "fast-xml-parser": "catalog:util",
     "nuxt": "catalog:framework",
+    "swiper": "catalog:ui",
     "vue": "catalog:framework",
     "vue-router": "catalog:framework",
     "vue-tippy": "catalog:ui"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:quality",
+    "@iconify-json/logos": "catalog:",
+    "@iconify-json/material-icon-theme": "catalog:",
     "@zinkawaii/stylelint-config": "catalog:quality",
     "eslint": "catalog:quality",
     "sass-embedded": "catalog:framework",
