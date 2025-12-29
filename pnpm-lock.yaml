@@ -12,6 +12,12 @@ catalogs:
     '@iconify-json/material-icon-theme':
       specifier: ^1.2.45
       version: 1.2.45
+    '@iconify-json/ph':
+      specifier: ^1.2.2
+      version: 1.2.2
+    '@iconify-json/ri':
+      specifier: ^1.2.6
+      version: 1.2.6
   framework:
     nuxt:
       specifier: ^4.2.1
@@ -163,6 +169,12 @@ importers:
       '@iconify-json/material-icon-theme':
         specifier: 'catalog:'
         version: 1.2.45
+      '@iconify-json/ph':
+        specifier: 'catalog:'
+        version: 1.2.2
+      '@iconify-json/ri':
+        specifier: 'catalog:'
+        version: 1.2.6
       '@zinkawaii/stylelint-config':
         specifier: catalog:quality
         version: 0.3.4(postcss-html@1.7.0)(postcss@8.5.6)(stylelint@16.25.0(typescript@5.9.3))
@@ -682,6 +694,12 @@ packages:
 
   '@iconify-json/material-icon-theme@1.2.45':
     resolution: {integrity: sha512-np2zHS5qp+Ljs78t2ylamU7qCgnJtgJDrvO6mFnbAUcGVD/PT9/RxaGfMNN52fYlWL0ORPOnrRJ3RNU+GRaY2g==}
+
+  '@iconify-json/ph@1.2.2':
+    resolution: {integrity: sha512-PgkEZNtqa8hBGjHXQa4pMwZa93hmfu8FUSjs/nv4oUU6yLsgv+gh9nu28Kqi8Fz9CCVu4hj1MZs9/60J57IzFw==}
+
+  '@iconify-json/ri@1.2.6':
+    resolution: {integrity: sha512-tGXRmXtb8oFu8DNg9MsS1pywKFgs9QZ4U6LBzUamBHaw3ePSiPd7ouE64gzHzfEcR16hgVaXoUa+XxD3BB0XOg==}
 
   '@iconify/collections@1.0.613':
     resolution: {integrity: sha512-7jqZqr7oGiDF7pxZgFtQIsyLTNNrO85zinaj8oDG7Cejp2SgmjAd5x50b8fvaMkPUzr6LDRbcn+U2odNqmdc4A==}
@@ -6151,6 +6169,14 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/material-icon-theme@1.2.45':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/ph@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/ri@1.2.6':
     dependencies:
       '@iconify/types': 2.0.0
 

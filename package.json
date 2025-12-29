@@ -39,6 +39,8 @@
     "@antfu/eslint-config": "catalog:quality",
     "@iconify-json/logos": "catalog:",
     "@iconify-json/material-icon-theme": "catalog:",
+    "@iconify-json/ph": "catalog:",
+    "@iconify-json/ri": "catalog:",
     "@zinkawaii/stylelint-config": "catalog:quality",
     "eslint": "catalog:quality",
     "sass-embedded": "catalog:framework",

@@ -19,6 +19,14 @@ const homepageConfig = {
 	favicon: '/icon.png',
 	url: 'https://home.zsxcoder.top/',
 	blogAtom: 'https://blog.zsxcoder.top/atom.xml',
+	// Mastodon 配置
+	mastodon: {
+		instance: 'mastodon.social',
+		userId: '115732018075313174', // 请填写你的 Mastodon 用户 ID
+		token: '', // 可选：如果需要访问私有内容，请填写访问令牌
+		tag: '', // 可选：筛选特定标签
+		shownMax: 30, // 最多显示多少条
+	},
 }
 
 // https://nitro.build/config#routerules

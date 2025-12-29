@@ -76,6 +76,7 @@ export default defineAppConfig({
 				{ icon: 'ri:code-line', text: '项目', url: '/project' },
 				{ icon: 'ri:planet-line', text: '站点', url: '/site' },
 				{ icon: 'ri:history-line', text: '日志', url: '/log' },
+				{ icon: 'ri:chat-3-line', text: '说说', url: '/talk' },
 				{ icon: 'ri:links-line', text: '友链', url: '/link' },
 			],
 		},

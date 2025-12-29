@@ -1,6 +1,8 @@
 catalog:
   '@iconify-json/logos': ^1.2.10
   '@iconify-json/material-icon-theme': ^1.2.45
+  '@iconify-json/ph': ^1.2.2
+  '@iconify-json/ri': ^1.2.6
   '@waline/client': 'catalog:'
 
 catalogs:
