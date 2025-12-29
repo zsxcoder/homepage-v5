@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { reactive, ref } from 'vue'
 import { sponsors } from '~/data/sponsors'
-import { ref, reactive } from 'vue'
 
 // SEO 配置
 useSeoMeta({
@@ -10,12 +10,13 @@ useSeoMeta({
 
 // 二维码卡片引用和效果状态
 const qrCardRefs = ref<HTMLElement[]>([])
-const qrCardEffects = reactive<Record<number, { x: number; y: number; show: boolean }>>({})
+const qrCardEffects = reactive<Record<number, { x: number, y: number, show: boolean }>>({})
 
 // 鼠标移动处理
 function handleQrCardMouseMove(event: MouseEvent, index: number) {
 	const card = qrCardRefs.value[index]
-	if (!card) return
+	if (!card)
+		return
 
 	const rect = card.getBoundingClientRect()
 	qrCardEffects[index] = {
@@ -34,109 +35,113 @@ function handleQrCardMouseLeave(index: number) {
 </script>
 
 <template>
-	<div class="page-sponsor">
-		<!-- 标题区域 -->
-		<div class="page-header">
-			<div class="header-content">
-				<h1 class="page-title">
-					赞助支持
-				</h1>
-				<p class="page-subtitle">
-					您的每一份支持都是我们前进的动力，让我们共同创造更多可能 ✨
-				</p>
-			</div>
-			<div class="header-icon">
-				<Icon name="ph:heart-bold" class="heart-icon" />
-			</div>
+<div class="page-sponsor">
+	<!-- 标题区域 -->
+	<div class="page-header">
+		<div class="header-content">
+			<h1 class="page-title">
+				赞助支持
+			</h1>
+			<p class="page-subtitle">
+				您的每一份支持都是我们前进的动力，让我们共同创造更多可能 ✨
+			</p>
 		</div>
+		<div class="header-icon">
+			<Icon name="ph:heart-bold" class="heart-icon" />
+		</div>
+	</div>
 
-		<!-- 二维码区域 -->
-		<div class="qr-section">
+	<!-- 二维码区域 -->
+	<div class="qr-section">
+		<div
+			v-for="(qr, index) in [
+				{ name: '微信支付', icon: 'ri:wechat-fill', color: '#07c160', img: 'https://cdn.jsdelivr.net/gh/mcyzsx/picx-images-hosting@master/links/weixin.webp', desc: '扫一扫，请我喝杯咖啡' },
+				{ name: '支付宝', icon: 'ri:alipay-fill', color: '#1677ff', img: 'https://cdn.jsdelivr.net/gh/mcyzsx/picx-images-hosting@master/links/alipay.webp', desc: '扫一扫，请我喝杯咖啡' },
+				{ name: '爱发电支持', icon: 'ph:heart', color: '#ec4899', img: 'https://imgbed.mcyzsx.top/file/custom/Vuaj4DpO.jpg', desc: '在爱发电上支持我', link: 'https://afdian.com/a/zsxcoder' },
+			]"
+			:key="index"
+			:ref="(el: any) => { if (el) qrCardRefs[index] = el }"
+			class="qr-card gradient-card"
+			@mousemove="(event) => handleQrCardMouseMove(event, index)"
+			@mouseleave="() => handleQrCardMouseLeave(index)"
+		>
+			<!-- 鼠标跟随效果 -->
 			<div
-				v-for="(qr, index) in [
-					{ name: '微信支付', icon: 'ph:chat-circle-dots', color: '#07c160', img: 'https://cdn.jsdelivr.net/gh/mcyzsx/picx-images-hosting@master/links/weixin.webp', desc: '扫一扫，请我喝杯咖啡' },
-					{ name: '支付宝', icon: 'ri:alipay-fill', color: '#1677ff', img: 'https://cdn.jsdelivr.net/gh/mcyzsx/picx-images-hosting@master/links/alipay.webp', desc: '扫一扫，请我喝杯咖啡' },
-					{ name: '爱发电支持', icon: 'ph:heart', color: '#ec4899', img: 'https://imgbed.mcyzsx.top/file/custom/Vuaj4DpO.jpg', desc: '在爱发电上支持我', link: 'https://afdian.com/a/zsxcoder' },
-				]"
-				:key="index"
-				:ref="(el: any) => { if (el) qrCardRefs[index] = el }"
-				class="qr-card gradient-card"
-				@mousemove="(event) => handleQrCardMouseMove(event, index)"
-				@mouseleave="() => handleQrCardMouseLeave(index)"
-			>
-				<!-- 鼠标跟随效果 -->
-				<div
-					v-if="qrCardEffects[index]?.show"
-					class="qr-glow"
-					:style="{
-						left: qrCardEffects[index]?.x - 80 + 'px',
-						top: qrCardEffects[index]?.y - 80 + 'px',
-						background: `radial-gradient(circle, ${qr.color} 0%, ${qr.color}33 30%, ${qr.color}1A 60%, transparent 90%)`,
-					}"
-				></div>
+				v-if="qrCardEffects[index]?.show"
+				class="qr-glow"
+				:style="{
+					left: `${qrCardEffects[index]?.x - 80}px`,
+					top: `${qrCardEffects[index]?.y - 80}px`,
+					background: `radial-gradient(circle, ${qr.color} 0%, ${qr.color}33 30%, ${qr.color}1A 60%, transparent 90%)`,
+				}"
+			/>
 
-				<div class="qr-header">
-					<Icon :name="qr.icon" class="qr-icon" :style="{ color: qr.color }" />
-					<h3>{{ qr.name }}</h3>
-				</div>
-
-				<div class="qr-placeholder">
-					<img :src="qr.img" :alt="qr.name">
-				</div>
-
-				<p class="qr-description">{{ qr.desc }}</p>
-
-				<a v-if="qr.link" :href="qr.link" class="qr-link" target="_blank" rel="nofollow">
-					<Icon name="ph:arrow-square-out-bold" />
-					前往爱发电
-				</a>
+			<div class="qr-header">
+				<Icon :name="qr.icon" class="qr-icon" :style="{ color: qr.color }" />
+				<h3>{{ qr.name }}</h3>
 			</div>
+
+			<div class="qr-placeholder">
+				<img :src="qr.img" :alt="qr.name">
+			</div>
+
+			<p class="qr-description">
+				{{ qr.desc }}
+			</p>
+
+			<a v-if="qr.link" :href="qr.link" class="qr-link" target="_blank" rel="nofollow">
+				<Icon name="ph:arrow-square-out-bold" />
+				前往爱发电
+			</a>
+		</div>
+	</div>
+
+	<!-- 提示信息 -->
+	<div class="notice-card gradient-card">
+		<div class="notice-icon">
+			<Icon name="ph:info-bold" />
+		</div>
+		<div class="notice-content">
+			<p class="notice-text">
+				<strong>重要提示：</strong>赞助了一定要给 <a href="mailto:3149261770@qq.com" class="email-link">3149261770@qq.com</a> 发邮件，表明渠道和单号，和你自己名称和内容，否则我认不清可能加不上。
+			</p>
+		</div>
+	</div>
+
+	<!-- 赞助名单 -->
+	<div class="sponsors-section">
+		<div class="section-header">
+			<h2 class="section-title">
+				<Icon name="ph:users-bold" />
+				赞助名单
+			</h2>
 		</div>
 
-		<!-- 提示信息 -->
-		<div class="notice-card gradient-card">
-			<div class="notice-icon">
-				<Icon name="ph:info-bold" />
-			</div>
-			<div class="notice-content">
-				<p class="notice-text">
-					<strong>重要提示：</strong>赞助了一定要给 <a href="mailto:3149261770@qq.com" class="email-link">3149261770@qq.com</a> 发邮件，表明渠道和单号，和你自己名称和内容，否则我认不清可能加不上。
-				</p>
-			</div>
-		</div>
-
-		<!-- 赞助名单 -->
-		<div class="sponsors-section">
-			<div class="section-header">
-				<h2 class="section-title">
-					<Icon name="ph:users-bold" />
-					赞助名单
-				</h2>
-			</div>
-
-			<div class="sponsors-list">
-				<div v-for="(sponsor, index) in sponsors" :key="index" class="sponsor-item gradient-card">
-					<div class="sponsor-avatar">
-						<img v-if="sponsor.avatar" :src="sponsor.avatar" :alt="sponsor.name">
-						<Icon v-else name="ph:user-bold" class="default-avatar" />
+		<div class="sponsors-list">
+			<div v-for="(sponsor, index) in sponsors" :key="index" class="sponsor-item gradient-card">
+				<div class="sponsor-avatar">
+					<img v-if="sponsor.avatar" :src="sponsor.avatar" :alt="sponsor.name">
+					<Icon v-else name="ph:user-bold" class="default-avatar" />
+				</div>
+				<div class="sponsor-info">
+					<div class="sponsor-name">
+						{{ sponsor.name }}
 					</div>
-					<div class="sponsor-info">
-						<div class="sponsor-name">{{ sponsor.name }}</div>
-						<div class="sponsor-meta">
-							<span class="sponsor-date">{{ sponsor.date }}</span>
-							<span class="sponsor-amount">{{ sponsor.amount }}</span>
-						</div>
+					<div class="sponsor-meta">
+						<span class="sponsor-date">{{ sponsor.date }}</span>
+						<span class="sponsor-amount">{{ sponsor.amount }}</span>
 					</div>
 				</div>
+			</div>
 
-				<!-- 空状态 -->
-				<div v-if="sponsors.length === 0" class="empty-state">
-					<Icon name="ph:heart-break-bold" class="empty-icon" />
-					<p>暂无赞助记录，期待您的支持！</p>
-				</div>
+			<!-- 空状态 -->
+			<div v-if="sponsors.length === 0" class="empty-state">
+				<Icon name="ph:heart-break-bold" class="empty-icon" />
+				<p>暂无赞助记录，期待您的支持！</p>
 			</div>
 		</div>
 	</div>
+</div>
 </template>
 
 <style scoped lang="scss">
