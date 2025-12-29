@@ -9,7 +9,7 @@ export default defineAppConfig({
 	...homepageConfig,
 
 	footer: [
-		`© ${new Date().getFullYear()} 纸鹿本鹿 (L33Z22L11)`,
+		`© ${new Date().getFullYear()} 钟神秀`,
 		h('a', { href: 'https://beian.miit.gov.cn/', target: '_blank', rel: 'noopener nofollow' }, '陕ICP备2025082251号'),
 	],
 
@@ -76,8 +76,11 @@ export default defineAppConfig({
 				{ icon: 'ri:code-line', text: '项目', url: '/project' },
 				{ icon: 'ri:planet-line', text: '站点', url: '/site' },
 				{ icon: 'ri:history-line', text: '日志', url: '/log' },
-				{ icon: 'ri:chat-3-line', text: '说说', url: '/talk' },
+				{ icon: 'ri:chat-3-line', text: 'Mastodon', url: '/talk' },
+				{ icon: 'ri:wechat-line', text: '说说', url: '/essays' },
 				{ icon: 'ri:links-line', text: '友链', url: '/link' },
+				{ icon: 'ri:group-line', text: '友链圈', url: '/fcircle' },
+				{ icon: 'ri:heart-line', text: '赞助', url: '/sponsor' },
 			],
 		},
 		{

@@ -30,6 +30,12 @@ export default defineNuxtConfig({
 		'~/components',
 	],
 
+	vue: {
+		compilerOptions: {
+			isCustomElement: tag => ['meting-js', 'aplayer'].includes(tag),
+		},
+	},
+
 	css: [
 		'@/assets/color.scss',
 		'@/assets/main.scss',
