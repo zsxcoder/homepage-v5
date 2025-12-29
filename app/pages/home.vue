@@ -23,6 +23,7 @@ const rightTags = [
 // 只在客户端加载脚本
 if (process.client) {
 	onMounted(() => {
+		window.scrollTo(0, 0)
 		// 动态加载外部 JS 脚本
 		/*
 		const loadScript = (url: string, callback?: () => void) => {

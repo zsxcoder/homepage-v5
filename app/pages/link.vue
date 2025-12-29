@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import FlinkTopCard from '~/components/link/FlinkTopCard.vue'
 import FriendLinkCard from '~/components/partial/FriendLinkCard.vue'
 import feeds from '~/feeds'
@@ -40,6 +40,10 @@ function handleCategoryChange(category: string) {
 		isTransitioning.value = false
 	}, 300)
 }
+
+onMounted(() => {
+	window.scrollTo(0, 0)
+})
 
 // 复制到剪贴板功能
 async function copyToClipboard(text: string, prompt: string) {

@@ -308,6 +308,8 @@ function fillEssayReplyContent(textarea: HTMLTextAreaElement, item: FormattedIte
 }
 
 onMounted(() => {
+	window.scrollTo(0, 0)
+
 	// 加载外部脚本和样式
 	const loadScript = (src: string) => {
 		return new Promise((resolve, reject) => {

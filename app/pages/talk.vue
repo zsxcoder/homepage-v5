@@ -57,6 +57,7 @@ async function fetchMastodonStatuses() {
 }
 
 onMounted(() => {
+	window.scrollTo(0, 0)
 	fetchMastodonStatuses()
 })
 
