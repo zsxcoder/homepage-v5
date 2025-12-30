@@ -7,96 +7,187 @@ definePageMeta({ headerText: '一些网站' })
 
 const toolSites: Array<CardProps> = [
 	{
-		name: 'CO导航',
-		nameAlt: 'xupt-nav',
+		name: 'NotionNext 导航',
+		nameAlt: 'notionnext-nav',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://cooo.site' },
-			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/xupt-wiki/xupt-nav' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://nav.zsxcoder.top' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/zsxcoder/notionnext' },
 		],
-		desc: '为西安邮电大学学生提供网址导航服务，于2023年2月7日开始运营，是“更适合西邮宝宝体质的网址导航”。',
+		desc: '基于Notion的Nav导航。',
 	},
 	{
-		name: '考试时钟',
-		nameAlt: 'ExamClock',
+		name: 'Ech0',
+		nameAlt: 'Ech0',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://exam.thisis.host' },
-			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/L33Z22L11/ExamClock' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://ech0.050815.xyz' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/lin-snow/Ech0' },
 		],
-		desc: '用于宝鸡中学校内考试，可以在大屏上展示科目信息、起止时间、考试进度，支持切换年级、文理科，于2021年4月1日上线并投入使用。',
+		desc: '面向个人的新一代开源、自托管、专注思想流动的轻量级联邦发布平台。',
 	},
 	{
-		name: '西邮Wiki',
-		nameAlt: 'xupt-wiki',
+		name: 'Phanpy',
+		nameAlt: 'Phanpy',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://wiki.cooo.site' },
-			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/xupt-wiki/xupt-wiki' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://mastodon.mcyzsx.top' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/zsxcoder/Phanpy' },
 		],
-		desc: '西安邮电大学第三方公益校园生活百科，于2024年6月30立项。本人于2024年7月30日使用VitePress搭建，持续更新中。',
+		desc: 'A minimalistic opinionated Mastodon web client',
 	},
 	{
-		name: '西邮Linux兴趣小组培养计划',
-		nameAlt: 'Plan',
+		name: 'ZSX-Music',
+		nameAlt: 'ZSX-Music',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://plan.xiyoulinux.com' },
-			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/xiyou-linuxer/Plan' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://music.zsx815.top/' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/mcyzsx/ZSX-Music' },
 		],
-		desc: '西邮Linux兴趣小组的培养计划，于2021年11月4日开源。本人于2024年3月20日使用MkDocs为此Plan构建网站，于2025年2月24日使用Nextra重构。',
+		desc: '基于张洪的音乐播放器自用。',
 	},
-
+	{
+		name: 'Notion-Photo',
+		nameAlt: 'Notion-Photo',
+		buttons: [
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://plog.zsxcoder.top' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/zsxcoder/notionnext' },
+		],
+		desc: '基于Notion的相册。',
+	},
+	{
+		name: '友链朋友圈',
+		nameAlt: '友链朋友圈',
+		buttons: [
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://fc.mcyzsx.top' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/zsxcoder/Friend-Circle-Lite' },
+		],
+		desc: '一个精简版，无后端，且仅利用github action运行的精简版友链朋友圈程序。',
+	},
+	{
+		name: '友链申请',
+		nameAlt: '友链申请',
+		buttons: [
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://link.314926.xyz/' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/zsxcoder/links-app-workers' },
+		],
+		desc: '基于 Cloudflare Workers 和 KV 存储的友链申请系统。',
+	},
+	{
+		name: '友链检测',
+		nameAlt: '友链检测',
+		buttons: [
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://check-flink.mcyzsx.top/' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/zsxcoder/check-flink' },
+		],
+		desc: '⚙️检查友链链接是否可连，可以大幅度减少检查工作量。',
+	},
+	{
+		name: 'memos-cloudflare',
+		nameAlt: 'memos-cloudflare',
+		buttons: [
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://memos.mcyzsx.top' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/mcyzsx/memos-cloudflare' },
+		],
+		desc: () => h('div', [
+			'运行在cloudflare平台上的memos复刻程序',
+		]),
+	},
+	{
+		name: 'moments-cloudflare',
+		nameAlt: 'moments-cloudflare',
+		buttons: [
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://moment.mcyzsx.top' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/mcyzsx/moments-cloudflare' },
+		],
+		desc: () => h('div', [
+			'moments项目cloudflare版本',
+		]),
+	},
 ]
 
 const orgSites: Array<CardProps> = [
 	{
-		name: '西邮Linux兴趣小组',
-		nameAlt: 'Xiyou Linux Group',
+		name: 'blog-v3',
+		nameAlt: 'blog-v3',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://xiyoulinux.com' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://blog.zsxcoder.top' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/zsxcoder/nuxt-blog-v3' },
 		],
-		desc: '西安邮电大学计算机学院2006年9月建立的一个兴趣小组。本人于2022年10月22日成为其中一员，于2024年3月16日使用VitePress重建官网。',
+		desc: '基于纸鹿的博客的魔改',
 	},
 	{
-		name: '野生技协',
-		nameAlt: 'TECHYES',
+		name: 'homepage-v5',
+		nameAlt: 'homepage-v5',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://thisis.host' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://home.zsxcoder.top' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/zsxcoder/homepage-v5' },
 		],
 		desc: () => h('div', [
-			'宝鸡中学校内的一个自发性的技术协助组织、无门槛的技术交流群，旨在信息分享、交流与公开，于2020年7月20日对外开放，多个',
-			h(ZLink, { to: 'https://thisis.host/site' }, '二级域名'),
-			'为校友提供项目部署服务。官网于2021年8月8日建立，并于2024年2月3日升级为博客。',
+			'基于纸鹿的主页的魔改。',
 		]),
 	},
 	{
-		name: '邮立方',
-		nameAlt: 'Cube of Posts',
+		name: 'ethereal-blog',
+		nameAlt: 'ethereal-blog',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://cop.cooo.site' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://myblog.zsxcoder.top' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/zsxcoder/ethereal' },
 		],
 		desc: () => h('div', [
-			'西安邮电大学校内的Minecraft兴趣交流团体，',
-			h(ZLink, { to: 'https://www.mualliance.cn/' }, 'Minecraft高校联盟(MUA)'),
-			'成员，于2023年10月6日对外开放。官网于2024年1月1日建立，并于2024年2月10日升级为博客。',
+			'A GitHub Issue blog theme based on Vue 2',
 		]),
 	},
 	{
-		name: '方块茶话会',
-		nameAlt: 'Block Tea Reception',
+		name: 'BroadcastChannel',
+		nameAlt: 'BroadcastChannel',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://btr.thisis.host/' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://tg.mcyzsx.top' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/zsxcoder/BroadcastChannel' },
 		],
 		desc: () => h('div', [
-			'宝鸡中学校内的Minecraft爱好群体，由',
-			h(ZLink, { icon: 'ph:github-logo-duotone', to: 'https://github.com/guuguai/' }, '古古怪怪GuuGuai'),
-			'于2020年7月17日建立。帮助文档网站于2022年6月12日建立，并于2024年2月21日迁移。',
+			'Turn your Telegram Channel into a MicroBlog.',
 		]),
 	},
 	{
-		name: '相侵相碍异家人',
-		nameAlt: 'Alien Family Hub',
+		name: 'vercel-mastondon',
+		nameAlt: 'vercel-mastondon',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://alienfamily.us.kg/' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://m.mcyzsx.top' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/zsxcoder/vercel-mastondon' },
 		],
-		desc: 'Hexo博客交流群“糖果屋”的群友组织的Minecraft服务器，于2024年7月18日建群。2025年2月2日创建了成员列表页面。',
+		desc: () => h('div', [
+			'部署在Vercel的个人说说页面, 基于 Mastodon / Pleroma / Gotosocial API',
+		]),
+	},
+	{
+		name: 'vercel-mastondon',
+		nameAlt: 'vercel-mastondon',
+		buttons: [
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://memos.mcyzsx.top' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/mcyzsx/memos-cloudflare' },
+		],
+		desc: () => h('div', [
+			'运行在cloudflare平台上的memos复刻程序',
+		]),
+	},
+	{
+		name: 'gwitter',
+		nameAlt: 'gwitter',
+		buttons: [
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://gwitter.zsxcoder.top' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/mcyzsx/gwitter' },
+		],
+		desc: () => h('div', [
+			'Turn GitHub Issues into your personal microblog platform',
+		]),
+	},
+	{
+		name: 'notion-moment-hugo',
+		nameAlt: 'notion-moment-hugo',
+		buttons: [
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://talk.zsxcoder.top' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/mcyzsx/notion-moment-hugo' },
+		],
+		desc: () => h('div', [
+			'基于Hugo的Notion说说',
+		]),
 	},
 ]
 </script>
@@ -104,7 +195,7 @@ const orgSites: Array<CardProps> = [
 <template>
 <ZTitle>工具类站点</ZTitle>
 <ZCardList :data-list="toolSites" />
-<ZTitle>组织门户</ZTitle>
+<ZTitle>博客&主页</ZTitle>
 <ZCardList :data-list="orgSites" />
 </template>
 

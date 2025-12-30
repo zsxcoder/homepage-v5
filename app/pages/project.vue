@@ -5,28 +5,33 @@ definePageMeta({ headerText: '参与的开源项目' })
 const projects = [
 	{
 		title: 'blog-v3',
-		github: 'L33Z22L11/blog-v3',
-		description: '个人博客网站，收获 100 star，被多人使用',
+		github: 'zsxcoder/blog-v3',
+		description: '基于纸鹿的博客自改',
 	},
 	{
 		title: 'homepage-v5',
-		github: 'L33Z22L11/homepage-v5',
-		description: '个人首页，使用 Nuxt.js 构建',
+		github: 'zsxcoder/homepage-v5',
+		description: '基于纸鹿的主页自改',
 	},
 	{
-		title: 'hexo-theme-stellar',
-		github: 'xaoxuu/hexo-theme-stellar',
-		description: '简洁优雅的 Hexo 主题',
+		title: 'Notion Moments',
+		github: 'zsxcoder/notion-moments',
+		description: '使用Notion的说说',
 	},
 	{
-		title: 'blog-feed',
-		github: 'xiyou-linuxer/blog-feed',
-		description: '使用 Nitro + MongoDB 搭建的博客订阅聚合 API',
+		title: 'Hugo Notion Moment',
+		github: 'zsxcoder/notion-moment-hugo',
+		description: '使用Notion作为数据源的Hugo主题说说',
 	},
 	{
-		title: 'zhilu-cv',
-		github: 'L33Z22L11/zhilu-cv',
-		description: '个人简历，使用 Nuxt.js 构建',
+		title: 'Talking-server',
+		github: 'zsxcoder/Talking-server',
+		description: '现代化的社交动态管理服务',
+	},
+	{
+		title: 'Ech0',
+		github: 'lin-snow/Ech0',
+		description: '面向个人的新一代开源、自托管、专注思想流动的轻量级联邦发布平台',
 	},
 ]
 </script>

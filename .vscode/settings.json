@@ -1,4 +1,7 @@
 {
   "vue.format.template.initialIndent": false,
-  "yaml.format.singleQuote": true
+"yaml.format.singleQuote": true,
+"cSpell.words": [
+    "zsxcoder"
+]
 }

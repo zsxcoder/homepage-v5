@@ -8,9 +8,24 @@ import homepageConfig from '~~/homepage.config'
 export default defineAppConfig({
 	...homepageConfig,
 
+	// 外链跳转配置
+	safego: homepageConfig.safego || {
+		enable: true,
+		enableBase64Encode: true,
+		countdowntime: 4,
+		enableDarkMode: 'auto',
+		domainWhitelist: [
+			'zsxcoder.top',
+			'github.com',
+			'home.zsxcoder.top',
+			'blog.zsxcoder.top',
+		],
+		ignoreAttrs: ['data-fancybox', 'data-nolink'],
+	},
+
 	footer: [
 		`© ${new Date().getFullYear()} 钟神秀`,
-		h('a', { href: 'https://beian.miit.gov.cn/', target: '_blank', rel: 'noopener nofollow' }, '陕ICP备2025082251号'),
+		// h('a', { href: 'https://beian.miit.gov.cn/', target: '_blank', rel: 'noopener nofollow' }, '陕ICP备2025082251号'),
 	],
 
 	// 用于在主页展示下游引用
@@ -86,9 +101,12 @@ export default defineAppConfig({
 		{
 			title: '社交',
 			items: [
-				{ icon: 'ri:qq-line', text: '群: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
-				{ icon: 'ri:mail-line', text: 'hi@zhilu.cyou', url: 'mailto:hi@zhilu.cyou' },
-				{ icon: 'ri:github-line', text: 'Github', url: 'https://github.com/L33Z22L11' },
+				{ icon: 'mdi:telegram', text: '克喵', url: 'https://t.me/KemiaoJun' },
+				{ icon: 'material-symbols:group', text: 'TG频道', url: 'https://t.me/kemiaofx_me' },
+				{ icon: 'ri:mail-line', text: '3149261770@qq.com', url: '3149261770@qq.com' },
+				{ icon: 'ri:github-line', text: 'Github', url: 'https://github.com/zsxcoder' },
+				{ icon: 'ri:qq-line', text: 'QQ', url: 'https://qm.qq.com/q/eLZhXoSonY' },
+				{ icon: 'mdi:mastodon', text: 'Mastodon', url: 'https://mastodon.social/@zsxcoder' },
 			],
 		},
 	] satisfies Nav,

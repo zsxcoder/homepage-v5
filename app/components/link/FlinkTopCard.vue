@@ -2,6 +2,9 @@
 import { computed, onMounted, ref } from 'vue'
 import feeds from '~/feeds'
 
+// 使用 safego 外链安全跳转
+const { transformLink, isExternal } = useSafego()
+
 // 定义类型接口
 interface FriendEntry {
 	author: string
@@ -27,6 +30,12 @@ function urlFor(path: string): string {
 	if (path.startsWith(''))
 		return `${domain}${path}`
 	return path
+}
+
+// 转换外链为安全链接
+function safeUrlFor(path: string): string {
+	const url = urlFor(path)
+	return isExternal(url) ? transformLink(url) : url
 }
 
 // 主题配置
@@ -133,12 +142,12 @@ const duplicatedPairs = computed(() => {
 				<!-- 遍历当前组的图标对（重复多次以实现无缝循环） -->
 				<div v-for="(pair, pairIndex) in duplicatedPairs" :key="pairIndex" class="tags-group-icon-pair">
 					<!-- 渲染偶数项头像 -->
-					<a class="tags-group-icon no-text-decoration" target="_blank" rel="noopener" :href="urlFor(pair.even.link)" :title="pair.even.author">
+					<a class="tags-group-icon no-text-decoration" target="_blank" rel="noopener" :href="safeUrlFor(pair.even.link)" :title="pair.even.author">
 						<img class="no-lightbox" :title="pair.even.author" :src="urlFor(pair.evenAvatar + pair.hundredSuffix)" :alt="pair.even.author" @error="handleImageError">
 					</a>
 
 					<!-- 渲染奇数项头像 -->
-					<a class="tags-group-icon no-text-decoration" target="_blank" rel="noopener" :href="urlFor(pair.odd.link)" :title="pair.odd.author">
+					<a class="tags-group-icon no-text-decoration" target="_blank" rel="noopener" :href="safeUrlFor(pair.odd.link)" :title="pair.odd.author">
 						<img class="no-lightbox" :title="pair.odd.author" :src="urlFor(pair.oddAvatar + pair.hundredSuffix)" :alt="pair.odd.author" @error="handleImageError">
 					</a>
 				</div>

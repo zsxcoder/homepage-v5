@@ -8,6 +8,7 @@ useSeoMeta({
 </script>
 
 <template>
+<ZParticlesBackground />
 <ZSidebar />
 <div class="content">
 	<ZHeader />

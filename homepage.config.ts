@@ -19,9 +19,25 @@ const homepageConfig = {
 	favicon: '/icon.png',
 	url: 'https://home.zsxcoder.top/',
 	blogAtom: 'https://blog.zsxcoder.top/atom.xml',
+	// 外链跳转配置
+	safego: {
+		enable: true,
+		enableBase64Encode: true,
+		countdowntime: 4,
+		enableDarkMode: 'auto' as 'auto' | boolean,
+		// 域名白名单（包含这些域名的链接不会跳转）
+		domainWhitelist: [
+			'zsxcoder.top',
+			'github.com',
+			'home.zsxcoder.top',
+			'blog.zsxcoder.top',
+		],
+		// 忽略处理的链接属性
+		ignoreAttrs: ['data-fancybox', 'data-nolink'],
+	},
 	// Mastodon 配置
 	mastodon: {
-		instance: 'mastodon.social',
+		instance: 'ech0.zhzsx.cn',
 		userId: '115732018075313174', // 请填写你的 Mastodon 用户 ID
 		token: '', // 可选：如果需要访问私有内容，请填写访问令牌
 		tag: '', // 可选：筛选特定标签
@@ -37,3 +53,5 @@ export const routeRules: NitroConfig['routeRules'] = {
 }
 
 export default homepageConfig
+
+// <a href="https://example.com" data-nolink>不被处理的链接</a>

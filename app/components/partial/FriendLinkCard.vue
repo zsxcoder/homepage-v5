@@ -17,16 +17,36 @@ const props = defineProps<{
 // 控制二维码模态框显示
 const showQrcodeModal = ref(false)
 
+// 使用 safego 外链安全跳转
+const { transformLink, isExternal } = useSafego()
+
+// 获取友链状态
+const { getStatusInfo } = useFlinkStatus()
+
+// 计算转换后的链接
+const safeSiteUrl = computed(() => {
+	// 如果是外链则转换，否则返回原始链接
+	return isExternal(props.siteUrl) ? transformLink(props.siteUrl) : props.siteUrl
+})
+
+// 计算状态信息
+const statusInfo = computed(() => getStatusInfo(props.siteUrl))
+
 // 跳转到友链网站
 function navigateToSite() {
-	if (props.siteUrl) {
-		window.open(props.siteUrl, '_blank')
+	if (safeSiteUrl.value) {
+		window.open(safeSiteUrl.value, '_blank')
 	}
 }
 </script>
 
 <template>
 <div class="friend-link-card">
+	<!-- 状态标签 -->
+	<div v-if="statusInfo" class="status-tag" :class="statusInfo.className">
+		{{ statusInfo.text }}
+	</div>
+
 	<!-- 卡片内部孔洞效果 -->
 	<div class="card-punch-hole" />
 
@@ -116,6 +136,44 @@ function navigateToSite() {
 </template>
 
 <style scoped lang="scss">
+/* 状态标签样式 */
+.status-tag {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 3px 8px;
+  border-radius: 12px 0px 12px 0px;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  transition: font-size 0.3s ease-out, opacity 0.3s ease-out;
+  z-index: 15;
+}
+
+.friend-link-card:hover .status-tag {
+  font-size: 0px;
+  opacity: 0;
+}
+
+/* 固态颜色 */
+.status-tag-green {
+  background-color: #005E00; /* 绿色 */
+}
+
+.status-tag-light-yellow {
+  background-color: #FED101; /* 浅黄色 */
+  color: #333;
+}
+
+.status-tag-dark-yellow {
+  background-color: #F0B606; /* 深黄色 */
+  color: #333;
+}
+
+.status-tag-red {
+  background-color: #B90000; /* 红色 */
+}
+
 /* 卡片容器基础样式 */
 .friend-link-card {
   position: relative;
