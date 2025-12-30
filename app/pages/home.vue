@@ -139,7 +139,7 @@ if (process.client) {
 				</p>
 				<p>
 					魔改参考
-					<ZLink to="https://github.com/MC-YCY/blog-ui" icon="ri:github-line">MC-YCY/blog-ui</ZLink>的前端代码
+					<ZLink to="https://github.com/MC-YCY/blog-ui" icon="ri:github-line">MC-YCY/blog-ui</ZLink>的前端代码、<ZLink to="https://github.com/MC-YCY/blog-ui" icon="ri:github-line">ataoyan/ATao-Blog</ZLink>的粒子效果、<ZLink to="https://github.com/MC-YCY/blog-ui" icon="ri:github-line">willow-god/Friend-Circle-Lite</ZLink>的友链朋友圈、<ZLink to="https://github.com/MC-YCY/blog-ui" icon="ri:github-line">willow-god/check-flink</ZLink>的友链检查以及<ZLink to="https://github.com/MC-YCY/blog-ui" icon="ri:github-line">willow-god/hexo-safego</ZLink>外链检查，以及其他别的项目的一些集合
 					。
 				</p>
 				<p>
