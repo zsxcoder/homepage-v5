@@ -45,8 +45,15 @@ function decodeUrl(encodedUrl: string): string {
 
 // 跳转到目标 URL
 function redirectToTarget() {
+	// 清除倒计时计时器
+	if (redirectTimer.value) {
+		clearInterval(redirectTimer.value)
+		redirectTimer.value = null
+	}
+
 	if (targetUrl.value) {
-		window.location.href = targetUrl.value
+		// 使用 location.replace 替代 href，避免浏览器阻止跳转
+		window.location.replace(targetUrl.value)
 	}
 }
 
