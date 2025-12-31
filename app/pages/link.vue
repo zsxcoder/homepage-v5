@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, nextTick } from 'vue'
 import FlinkTopCard from '~/components/link/FlinkTopCard.vue'
 import FriendLinkCard from '~/components/partial/FriendLinkCard.vue'
 import feeds from '~/feeds'
@@ -42,7 +42,11 @@ function handleCategoryChange(category: string) {
 }
 
 onMounted(() => {
-	window.scrollTo(0, 0)
+	nextTick(() => {
+		setTimeout(() => {
+			window.scrollTo(0, 0)
+		}, 100)
+	})
 })
 
 // 复制到剪贴板功能
