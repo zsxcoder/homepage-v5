@@ -101,7 +101,7 @@ export default defineAppConfig({
 		{
 			title: '社交',
 			items: [
-				{ icon: 'mdi:telegram', text: 'TG账户', url: 'https://t.me/zsxcoder_bot' },
+				{ icon: 'mdi:telegram', text: 'TG账户', url: 'https://t.me/zsxcoderchat_bot' },
 				{ icon: 'material-symbols:group', text: 'TG频道', url: 'https://t.me/kemiaofx_me' },
 				{ icon: 'ri:mail-line', text: '3149261770@qq.com', url: '3149261770@qq.com' },
 				{ icon: 'ri:github-line', text: 'Github', url: 'https://github.com/zsxcoder' },
