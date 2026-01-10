@@ -3,12 +3,12 @@ import { getFavicon, getGhAvatar, getGhIcon } from './utils/img'
 
 export default [
 	{
-		name: '网上邻居',
+		name: '推荐博客',
 		entries: [
 			{
 				author: '纸鹿本鹿',
 				sitenick: '纸鹿摸鱼处',
-				desc: '纸鹿至麓不知路，支炉制露不止漉纸鹿至麓不知路，支炉制露不止漉',
+				desc: '纸鹿至麓不知路，支炉制露不止漉',
 				link: 'https://blog.zhilu.site/',
 				avatar: 'https://cdn.jsdelivr.net/gh/mcyzsx/picx-images-hosting@master/links/image.8ok4l9tqge.webp',
 				date: '2025-09-03',
@@ -75,6 +75,43 @@ export default [
 				date: '2025-11-23',
 				recommend: true,
 			},
+			// 2026-01-10
+			{
+				author: '张洪Heo',
+				sitenick: '张洪Heo',
+				desc: '分享设计与科技生活',
+				link: 'https://blog.zhheo.com/',
+				avatar: 'https://img.zhheo.com/i/67d8fa75943e4.webp',
+				qrcode: 'https://cdn.jsdmirror.com/gh/zsxcoder/picx-images-hosting@master/links/links-zhheo.webp',
+				date: '2026-01-10',
+				recommend: true,
+			},
+			{
+				author: 'CWorld',
+				sitenick: 'CWorld Site',
+				desc: '求知若愚，虚怀若谷',
+				link: 'https://cworld0.com/',
+				avatar: 'https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200',
+				qrcode: 'https://cdn.jsdmirror.com/gh/zsxcoder/picx-images-hosting@master/links/links-cworld.webp',
+				date: '2026-01-10',
+				recommend: true,
+			},
+			{
+				author: '梨尽兴',
+				sitenick: '梨尽兴的博客',
+				desc: 'A place for peace',
+				link: 'https://blog.ljx.icu',
+				avatar: 'https://blog.ljx.icu/favicon.png',
+				qrcode: 'https://cdn.jsdmirror.com/gh/zsxcoder/picx-images-hosting@master/links/links-ljxme.webp',
+				date: '2026-01-10',
+				recommend: true,
+			},
+			// …想加继续往下写
+		],
+	},
+	{
+		name: '网上邻居',
+		entries: [
 			{
 				author: 'Cynosura',
 				sitenick: 'Cynosura',
@@ -84,13 +121,6 @@ export default [
 				qrcode: 'https://cdn.jsdelivr.net/gh/mcyzsx/picx-images-hosting@master/links/cyno.6t7kdbrnvk.webp',
 				date: '2025-12-4',
 			},
-			// …想加继续往下写
 		],
 	},
-//   {
-//     name: "程序猿",
-//     entries: [
-//       // 另一组
-//     ],
-//   },
 ] satisfies FeedGroup[]
